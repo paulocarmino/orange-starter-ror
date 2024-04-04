@@ -1,0 +1,45 @@
+<div class="flex flex-col justify-center py-12 min-h-full sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <h2 class="mt-6 text-2xl font-bold tracking-tight leading-9 text-center text-gray-900">Registration</h2>
+  </div>
+
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
+    <div class="px-6 py-12 bg-white shadow sm:rounded-lg sm:px-12">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "space-y-6" }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div>
+          <%= f.label :full_name, class: "block text-sm font-medium leading-6 text-gray-900" %>
+          <%= f.text_field :full_name, autofocus: true, autocomplete: "full_name", class: "block py-1.5 w-full text-gray-900 rounded-md border-0 ring-1 ring-inset ring-gray-300 shadow-sm placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-500 sm:text-sm sm:leading-6" %>
+        </div>
+
+        <div>
+          <%= f.label :email, class: "block text-sm font-medium leading-6 text-gray-900" %>
+          <%= f.text_field :email, autofocus: true, autocomplete: "email", class: "block py-1.5 w-full text-gray-900 rounded-md border-0 ring-1 ring-inset ring-gray-300 shadow-sm placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-500 sm:text-sm sm:leading-6" %>
+        </div>
+
+        <div>
+          <div class="field">
+            <%= f.label :password, class: "block text-sm font-medium leading-6 text-gray-900" %>
+            <%= f.password_field :password, autocomplete: "new-password", class: "block py-1.5 w-full text-gray-900 rounded-md border-0 ring-1 ring-inset ring-gray-300 shadow-sm placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-500 sm:text-sm sm:leading-6" %>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <input id="terms_and_conditions" name="terms_and_conditions" type="checkbox" class="w-4 h-4 text-amber-500 rounded border-gray-300 focus:ring-amber-500">
+            <label for="terms_and_conditions" class="block ml-3 text-sm leading-6 text-gray-900">I agree to the <a href="#" class="font-semibold leading-6 text-amber-500 hover:text-amber-600">terms and conditions</a></label>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit" class="flex justify-center px-3 py-1.5 w-full text-sm font-semibold leading-6 text-white bg-amber-500 rounded-md shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700">Sign up</button>
+        </div>
+      <% end %>
+    </div>
+
+    <p class="mt-10 text-sm text-center text-gray-500">
+      <%= render "devise/shared/links" %>
+    </p>
+  </div>
+</div>

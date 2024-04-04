@@ -1,0 +1,12 @@
+<div class="flex justify-center items-center w-screen h-screen text-center" data-controller="hello">
+  <div class="flex flex-col items-center">
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><span class="underline underline-offset-3 decoration-8 decoration-amber-500 dark:decoration-amber-600">Protected</span> page!</h1>
+
+    <%= link_to root_path, class: "inline-flex justify-center items-center px-5 py-3 mt-6 text-base font-medium text-center text-white bg-amber-500 rounded-lg hover:bg-amber-600 focus:ring-4 focus:ring-amber-300 dark:focus:ring-amber-600" do %>
+      <svg class="w-3.5 h-3.5 rotate-180 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+      </svg>
+      Back
+    <% end %>
+  </div>
+</div>
